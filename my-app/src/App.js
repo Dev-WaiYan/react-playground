@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import P_USEMEMO from "./pages/P_UseMemo";
 
 function App() {
+  const PAGE = {
+    P_USECALLBACK: "useCallback",
+    P_USEMEMO: "useMemo",
+  };
+
+  const [currentPage, setCurrentPage] = useState();
+
+  const handlePage = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="p-5">
+      <h1>React Deep Playground</h1>
+      <h3 className="text-info">
+        Please see the logs in console, will see the result and changes.
+      </h3>
+
+      <div className="my-5">
+        <button
+          className="me-5"
+          onClick={() => {
+            alert("I have not implemented yet!");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          useCallback
+        </button>
+        <button onClick={() => handlePage(PAGE.P_USEMEMO)}>useMemo</button>
+      </div>
+
+      {currentPage === PAGE.P_USEMEMO && <P_USEMEMO />}
+      {currentPage === PAGE.P_USECALLBACK && <P_USEMEMO />}
     </div>
   );
 }
