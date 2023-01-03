@@ -1,11 +1,11 @@
 import React from "react";
 
-function PCore() {
+function PAdvanced() {
   return (
     <div className="flex flex-col items-center justify-center py-5">
       <div className="flex flex-col items-center bg-slate-200 p-3 rounded-md shadow-md">
         <p>
-          Currently, reactjs <strong>core</strong> demos are not available.
+          Currently, reactjs <strong>advanced</strong> demos are not available.
         </p>
         <div className="text-3xl">&#x1F625;</div>
       </div>
@@ -18,4 +18,4 @@ function PCore() {
   );
 }
 
-export default PCore;
+export default PAdvanced;
