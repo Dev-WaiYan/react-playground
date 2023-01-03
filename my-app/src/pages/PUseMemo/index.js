@@ -3,7 +3,7 @@ import NeverReRender from "./NeverReRender";
 import WillReRenderEverytime from "./WillReRenderEverytime";
 import WillReRenderIfNeed from "./WillReRenderIfNeed";
 
-function P_USEMEMO() {
+function P_UseMemo() {
   const [ableToChange, setAbleToChange] = useState(Date.now());
   const [counter, setCounter] = useState(0);
 
@@ -41,4 +41,4 @@ function P_USEMEMO() {
   );
 }
 
-export default P_USEMEMO;
+export default P_UseMemo;
