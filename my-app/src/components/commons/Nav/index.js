@@ -1,14 +1,18 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Nav() {
   const navigate = useNavigate();
+  const route = useLocation();
+
+  console.log("route", route);
 
   const links = [
     {
       id: 2,
       text: "Style",
       path: "style",
+      isLandingPage: true,
     },
     {
       id: 1,
@@ -31,7 +35,12 @@ function Nav() {
         {links.map((link) => (
           <li
             key={link.id}
-            className="hover:text-sky-50 text-sky-900 ml-5"
+            className={`hover:text-sky-50 text-sky-900 ml-5 ${
+              route.pathname.includes(link.path) ||
+              (route.pathname === "/" && link.isLandingPage)
+                ? "text-red-400"
+                : ""
+            }`}
             onClick={() => navigate(link.path)}
           >
             {link.text}
