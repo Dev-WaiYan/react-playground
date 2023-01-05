@@ -24,6 +24,7 @@ function Nav() {
       text: "Advanced",
       path: "advanced",
     },
+    { id: 4, text: "Package/Library", path: "lib" },
   ];
 
   return (

@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./style.module.css";
 
-function ResolvedComponent() {
+function ResolvedComponent({ className }) {
   return (
-    <div className={`${styles["css-container"]} m-3 p-3 rounded-lg`}>
+    <div
+      className={`${styles["css-container"]} m-3 p-3 rounded-lg ${className}`}
+    >
       <p>
         Background Color should be <strong>ORANGE RED</strong>.
       </p>

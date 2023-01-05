@@ -22,7 +22,7 @@ function CssStyleIssue() {
         <h1 className="m-3 text-xl">
           Resolved Component Using <strong>CSS MODULE</strong>
         </h1>
-        <ResolvedComponent />
+        <ResolvedComponent className="italic underline" />
       </div>
     </div>
   );
